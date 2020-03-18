@@ -101,7 +101,16 @@ const rovarspraket = text => {
  * reverse("skoob") should return the
  * string "books".
  */
+const reverse = text => {
+  let result = ''
+  let i
 
+  for (i = text.length - 1; i >= 0; i--) {
+    let char = text[i]
+    result += char
+  }
+  return result
+}
 // ...
 
 /**
@@ -110,7 +119,13 @@ const rovarspraket = text => {
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
-
+const findLongestWor = text => {
+  let result = ''
+  // create and set an empty array
+  // separate the words in the array by 'space'
+  // take in the text and set the fist string(word) as a value in the array
+  // check the array for the longest value(value with the most chars)
+}
 // ...
 
 /**
