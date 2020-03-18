@@ -3,13 +3,28 @@
  * and returns the largest of them. Use the if-then-else
  * construct available in Javascript.
  */
-
+const max = (number1, number2) => {
+  if (number1 > number2) {
+    return number1
+  } else {
+    return number2
+  }
+}
 // ...
 
 /**
  * 2) Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
+const maxOfThree = (number1, number2, number3) => {
+  if (number1 > number2 && number1 > number3) {
+    return number1
+  } else if (number2 > number1 && number2 > number3) {
+    return number2
+  } else if (number3 > number1 && number3 > number2) {
+    return number3
+  }
+}
 
 // ...
 
@@ -17,21 +32,41 @@
  * 3) Define a function sum() that takes two numbers as
  * arguments and computes the sum of those two numbers.
  */
-
+const sum = (number1, number2) => {
+  let sumTotal = number1 + number2
+  return sumTotal
+}
 // ...
 
 /*
  * 4) Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
-
+const sumOfArray = arrayOfNumbers => {
+  let i
+  let sumTotal = 0
+  for (i = 0; i < arrayOfNumbers.length; i++) {
+    sumTotal = sumTotal + arrayOfNumbers[i]
+  }
+  return sumTotal
+}
 // ...
 
 /**
  * 5) Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
+const isVowel = character => {
+  let lowerCaseCharacter = character.toLowerCase()
 
+  return (
+    lowerCaseCharacter === 'a' ||
+    lowerCaseCharacter === 'e' ||
+    lowerCaseCharacter === 'i' ||
+    lowerCaseCharacter === 'o' ||
+    lowerCaseCharacter === 'u'
+  )
+}
 // ...
 
 /**
@@ -42,7 +77,22 @@
  * For example, rovarspraket("this is fun") should
  * return the string "tothohisos isos fofunon".
  */
+const rovarspraket = text => {
+  let vowels = ['a', 'e', 'i', 'o', 'u']
 
+  let result = ''
+  let i
+  for (i = 0; i < text.length; i++) {
+    let char = text[i]
+    // if the array of vowels does not include the character --> is a consonant
+    if (!vowels.includes(char.toLowerCase())) {
+      result += char + 'o' + char.toLowerCase()
+    } else {
+      result += char
+    }
+  }
+  return result
+}
 // ...
 
 /**
